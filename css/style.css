@@ -83,8 +83,7 @@ img{
 
 .gallery{
     display: grid;
-    grid-template-columns: auto auto auto auto;
-    /* grid-template-columns: 1fr 18fr 18fr 1fr; */
+    grid-template-columns: 1fr 18fr 18fr 1fr;
     grid-template-rows: auto auto auto auto;
     row-gap: 5px;
 }
@@ -96,68 +95,67 @@ img{
     border-right: 2px #0463ca solid; */
 }
 
-.suspension_bridge{
+#suspension_bridge{
     grid-row: 1 / span 1;
-    /* grid-column: 2 / span 2; */
-    grid-column: 1 / span all;
+    grid-column: 2 / span 2;
     filter: saturate(120%);
     filter: opacity(93%);
 }
 
-.hot_pot{
+#hot_pot{
     grid-row: 2 / span 1;
-    grid-column: 1 / span all;
+    grid-column: 2 / span 2;
     filter: saturate(150%);
     filter: opacity(95%);
     filter: brightness(110%);
 }
 
-.japanese_cuisine{
+#japanese_cuisine{
     grid-row: 3 / span 1;
-    grid-column: 1 / span all;
+    grid-column: 2 / span 2;
     filter: saturate(150%);
     filter: opacity(95%);
     filter: brightness(110%);
 }
 
-.european_cuisine{
+#european_cuisine{
     grid-row: 4 / span 1;
-    grid-column: 1 / span all;
+    grid-column: 2 / span 2;
     filter: saturate(120%);
     filter: opacity(93%);
 }
 
-.cherry_blossoms{
+#cherry_blossoms{
     grid-row: 5 / span 1;
-    grid-column: 1 / span all;
+    grid-column: 2 / span 2;
     filter: saturate(120%);
     filter: opacity(93%);
 }
 
-.marble_caves{
+#marble_caves{
     grid-row: 6 / span 1;
-    grid-column: 1 / span all;
+    grid-column: 2 / span 2;
     filter: saturate(120%);
     filter: opacity(93%);
 }
 
-.grand_prismatic_spring{
+#grand_prismatic_spring{
     grid-row: 7 / span 1;
-    grid-column: 1 / span all;
+    grid-column: 2 / span 2;
     filter: saturate(120%);
     filter: opacity(93%);
 }
 
-.national_park_australia{
+#national_park_australia{
     grid-row: 8 / span 1;
-    grid-column: 1 / span all;
+    grid-column: 2 / span 2;
     filter: saturate(150%);
     filter: opacity(93%);
 }
 
-.salar_de_uvuni{
+#salar_de_uvuni{
     grid-row: 9 / span 1;
-    grid-column: 1 / span all;
+    grid-column: 2 / span 2;
     filter: saturate(120%);
     filter: opacity(93%);
 }
@@ -182,8 +180,16 @@ footer{
     border-top: 3px solid black;
 }
 
+/* .southeastern, .northeastern, .northwestern, .southwestern{
+    display: grid;
+    grid-template-columns: 1fr 18fr 18fr 1fr;
+    grid-template-rows: auto auto auto auto;
+} */
+
 .first_image, .second_image, .third_image{
     filter: saturate(120%);
+    /* grid-row: 1 / span 1;
+    grid-column: 2 / span 2; */
 }
 
 @media screen and (prefers-reduced-motion: reduce){
