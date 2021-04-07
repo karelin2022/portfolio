@@ -27,6 +27,10 @@ h1{
     font-weight: bold;
 }
 
+#big_screen{
+    display: none;
+}
+
 h1, h2{
     font-family: 'Eagle Lake';
 }
@@ -59,10 +63,26 @@ body{
     text-decoration: none;
 }
   
-.navigation a:hover, .navigation a:focus, .navigation .current{
-    color: #0463ca;
-    text-decoration: #0463ca dotted underline;
+.navigation a:focus, .navigation .current{
+    /* color: #0463ca;
+    text-decoration: white solid underline;
     font-size: 1.2em;
+    border-radius: 1em;
+    border: 2px solid #0463ca; */
+
+    /* color: white;
+    text-decoration: white solid underline;
+    background-color: #378dea;
+    font-size: 1.2em;
+    border-radius: 1em;
+    border: 2px solid black; */
+
+    color: #0463ca;
+    /* text-decoration: #0463ca solid underline; */
+    /* font-size: 1.2em; */
+    border-radius: 0.2em;
+    border: 0.8px solid #0463ca;
+    text-transform: uppercase;
 }
 
 .nav_bar{
@@ -71,6 +91,7 @@ body{
     display: flex;
     flex-direction: column;
     align-items: center;
+    line-height: 1.5;
     /* flex-wrap: wrap; */
 }
 
@@ -102,12 +123,20 @@ img{
     filter: opacity(93%);
 }
 
+#suspension_text{
+    display: none;
+}
+
 #hot_pot{
     grid-row: 2 / span 1;
     grid-column: 2 / span 2;
     filter: saturate(150%);
     filter: opacity(95%);
     filter: brightness(110%);
+}
+
+#pot_text{
+    display: none;
 }
 
 #japanese_cuisine{
@@ -118,11 +147,19 @@ img{
     filter: brightness(110%);
 }
 
+#jap_text{
+    display: none;
+}
+
 #european_cuisine{
     grid-row: 4 / span 1;
     grid-column: 2 / span 2;
     filter: saturate(120%);
     filter: opacity(93%);
+}
+
+#euro_text{
+    display: none;
 }
 
 #cherry_blossoms{
@@ -132,11 +169,19 @@ img{
     filter: opacity(93%);
 }
 
+#blossoms_text{
+    display: none;
+}
+
 #marble_caves{
     grid-row: 6 / span 1;
     grid-column: 2 / span 2;
     filter: saturate(120%);
     filter: opacity(93%);
+}
+
+#patagonia_text{
+    display: none;
 }
 
 #grand_prismatic_spring{
@@ -146,11 +191,19 @@ img{
     filter: opacity(93%);
 }
 
+#wyoming_text{
+    display: none;
+}
+
 #national_park_australia{
     grid-row: 8 / span 1;
     grid-column: 2 / span 2;
     filter: saturate(150%);
     filter: opacity(93%);
+}
+
+#aust_text{
+    display: none;
 }
 
 #salar_de_uvuni{
@@ -160,6 +213,10 @@ img{
     filter: opacity(93%);
 }
 
+#bolivia_text{
+    display: none;
+}
+
 h2{
     font-size: 1.5em;
     font-weight: bold;
@@ -167,7 +224,7 @@ h2{
     margin-bottom: 3px;
 }
 
-.southeastern, .northeastern, .northwestern, header{
+.southeastern, .northeastern, .special, .northwestern, header{
     border-bottom: 3px solid black;
 }
 
@@ -180,7 +237,7 @@ footer{
     border-top: 3px solid black;
 }
 
-/* .southeastern, .northeastern, .northwestern, .southwestern{
+/* .southeastern, .northeastern, .special, .northwestern, .southwestern{
     display: grid;
     grid-template-columns: 1fr 18fr 18fr 1fr;
     grid-template-rows: auto auto auto auto;
@@ -198,3 +255,228 @@ footer{
     }
 }
 
+@media screen and (min-width: 760px){
+    /* header{
+      flex-direction: row;
+      justify-content: space-between;
+    }
+  
+    .nav_links{
+      flex-direction: row;
+      justify-content: space-between;
+    } */
+
+
+    #mobile{
+        display: none;
+    }
+
+    #big_screen{
+        display: initial;
+    }
+
+    img{
+        height: 100%;
+    }
+
+    /* .container div.special{
+        height: 80%;
+    } */
+    
+    /* #pool_text{
+        height: 80%;
+    } */
+
+    .gallery{
+        grid-template-columns: 1fr 18fr 18fr 18fr 1fr;
+        column-gap: 5px;
+    }
+
+    #suspension_bridge{
+        grid-row: 1 / span 1;
+        grid-column: 2 / span 1;
+    }
+    
+    #hot_pot{
+        grid-row: 1 / span 1;
+        grid-column: 3 / span 1;
+    }
+    
+    #japanese_cuisine{
+        grid-row: 1 / span 1;
+        grid-column: 4 / span 1;
+    }
+
+    #suspension_text{
+        display: grid;
+        grid-row: 2 / span 1;
+        grid-column: 2 / span 1;
+        text-align: center;
+        border-radius: 1em;
+        border: 1px #3985d6 solid;
+        padding-bottom: 0.2em;
+    }
+
+    #pot_text{
+        display: grid;
+        grid-row: 2 / span 1;
+        grid-column: 3 / span 1;
+        text-align: center;
+        border-radius: 1em;
+        border: 1px #3985d6 solid;
+        padding-bottom: 0.2em;
+    }
+
+    #jap_text{
+        display: grid;
+        grid-row: 2 / span 1;
+        grid-column: 4 / span 1;
+        text-align: center;
+        border-radius: 1em;
+        border: 1px #3985d6 solid;
+        padding-bottom: 0.2em;
+    }
+    
+    #european_cuisine{
+        grid-row: 3 / span 1;
+        grid-column: 2 / span 1;
+    }
+    
+    #cherry_blossoms{
+        grid-row: 3 / span 1;
+        grid-column: 3 / span 1;
+    }
+    
+    #marble_caves{
+        grid-row: 3 / span 1;
+        grid-column: 4 / span 1;
+    }
+
+    #euro_text{
+        display: grid;
+        grid-row: 4 / span 1;
+        grid-column: 2 / span 1;
+        text-align: center;
+        border-radius: 1em;
+        border: 1px #3985d6 solid;
+        padding-bottom: 0.2em;
+    }
+
+    #blossoms_text{
+        display: grid;
+        grid-row: 4 / span 1;
+        grid-column: 3 / span 1;
+        text-align: center;
+        border-radius: 1em;
+        border: 1px #3985d6 solid;
+        padding-bottom: 0.2em;
+    }
+
+    #patagonia_text{
+        display: grid;
+        grid-row: 4 / span 1;
+        grid-column: 4 / span 1;
+        text-align: center;
+        border-radius: 1em;
+        border: 1px #3985d6 solid;
+        padding-bottom: 0.2em;
+    }
+    
+    #grand_prismatic_spring{
+        grid-row: 5 / span 1;
+        grid-column: 2 / span 1;
+    }
+    
+    #national_park_australia{
+        grid-row: 5 / span 1;
+        grid-column: 3 / span 1;
+    }
+    
+    #salar_de_uvuni{
+        grid-row: 5 / span 1;
+        grid-column: 4 / span 1;
+    }
+
+    #wyoming_text{
+        display: grid;
+        grid-row: 6 / span 1;
+        grid-column: 2 / span 1;
+        text-align: center;
+        border-radius: 1em;
+        border: 1px #3985d6 solid;
+        padding-bottom: 0.2em;
+        margin-bottom: 0.7em;
+    }
+
+    #aust_text{
+        display: grid;
+        grid-row: 6 / span 1;
+        grid-column: 3 / span 1;
+        text-align: center;
+        border-radius: 1em;
+        border: 1px #3985d6 solid;
+        padding-bottom: 0.2em;
+        margin-bottom: 0.7em;
+    }
+
+    #bolivia_text{
+        display: grid;
+        grid-row: 6 / span 1;
+        grid-column: 4 / span 1;
+        text-align: center;
+        border-radius: 1em;
+        border: 1px #3985d6 solid;
+        padding-bottom: 0.2em;
+        margin-bottom: 0.7em;
+    }
+
+    .container{
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: auto auto auto auto;
+        /* row-gap: 5px; */
+        /* column-gap: 5px; */
+    }
+
+    .northeastern, .special{
+        /* margin-top: 0.7em; */
+        grid-row: 1 / span 1;
+        grid-column: 1 / span 1;
+    }
+
+    .text{
+        /* margin-top: 0.7em; */
+        grid-row: 1 / span 1;
+        grid-column: 2 / span 1;
+    }
+
+    .text_two{
+        grid-row: 2 / span 1;
+        grid-column: 1 / span 1;
+    }
+
+    .southeastern, .northwestern{
+        grid-row: 2 / span 1;
+        grid-column: 2 / span 1;
+    }
+
+    .southwestern{
+        grid-row: 3 / span 1;
+        grid-column: 1 / span 1;
+    }
+
+    .text_three{
+        grid-row: 3 / span 1;
+        grid-column: 2 / span 1;
+    }
+
+    .southeastern, .northeastern, .special, .northwestern{
+        border-bottom: none;
+    }
+
+    /* .navigation a:hover{
+        color: black;
+        text-decoration: black solid underline;
+        font-size: 1.2em;
+    } */
+  }
